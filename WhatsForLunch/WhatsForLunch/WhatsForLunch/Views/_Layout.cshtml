@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Resources/CSS/StyleSheet.css" type="text/css"  rel="stylesheet" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+    <div id="mask"></div>
+
+    <div id="threshold">
+
+        <div id="nav">
+            <div id="title"><span class="small">what's for</span><span class="large">lunch?</span></div>
+            <div class="button active"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <footer></footer>
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+    </div>
+
+
+</body>
+</html>
