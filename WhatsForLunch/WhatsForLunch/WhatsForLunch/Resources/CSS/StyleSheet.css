@@ -8,6 +8,7 @@ body {
   font-weight: lighter;
   font-size: 16px;
 }
+/* PRIMARY NAVIGATION */
 #nav #title {
   background: #fff;
   position: relative;
@@ -18,13 +19,16 @@ body {
 }
 #nav .button {
   background: url('/Resources/Images/repeatWhite.png') repeat;
+  cursor: pointer;
 }
 #nav .button.active {
   background: #3da4ba;
+  cursor: auto;
 }
 #nav footer {
   background: #fff;
 }
+/* PRIMARY CONTENT - PICKING WHATS FOR LUNCH */
 #content {
   overflow: hidden;
 }
@@ -37,10 +41,10 @@ body {
   left: 0;
 }
 #content .bgOne {
-  background: url('/Resources/Images/BG-Chicken.png') no-repeat;
+  background: url('/Resources/Images/BG-Chicken.png') top left no-repeat;
 }
 #content .bgTwo {
-  background: url('/Resources/Images/BG-Burger.png') no-repeat;
+  background: url('/Resources/Images/BG-Burger.png') top center no-repeat;
 }
 #content .mask {
   background: url('/Resources/Images/repeatBlack.png') repeat;
@@ -53,6 +57,7 @@ body {
 #content #info {
   width: 100%;
 }
+/* SECONDARY CONTENT - BAGDES/VETOES/OVERRIDES */
 #secondaryContent #badges {
   min-width: 150px;
   width: auto;
@@ -63,12 +68,18 @@ body {
 @media only screen and (max-width: 480px) {
   #nav {
     width: 100%;
-    height: 150px;
-    position: absolute;
+    height: 70px;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 1;
+  }
+  #nav #navWrap {
+    width: 280px;
+    margin: 0 auto;
+    display: block;
+    visibility: visible;
   }
   #nav #title,
   #nav .button,
@@ -76,26 +87,79 @@ body {
     float: left;
   }
   #nav #title {
-    background: #fff;
-    width: 20%;
-    height: 150px;
+    background: transparent;
+    width: 54px;
+    height: 54px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
   }
-  #nav #title:after {
-    content: "";
-    position: absolute;
-    border-left: 5px solid #fff;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    left: 100%;
-    top: 46%;
+  #nav #title .logo {
+    background: url('/Resources/Images/WFL-Logo-799.png') no-repeat;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto;
   }
   #nav .button {
-    background: url('/Resources/Images/repeatWhite.png') repeat;
-    width: 20%;
-    height: 150px;
+    width: 70px;
+    height: 70px;
+  }
+  #nav .button:active {
+    background: #fff;
+  }
+  #nav .button:active .lunchIcon {
+    background: url('/Resources/Images/mobile/lunchAlt.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 19px 0 0 19px;
+  }
+  #nav .button:active .historyIcon {
+    background: url('/Resources/Images/mobile/historyAlt.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 19px 0 0 19px;
+  }
+  #nav .button:active .ratingsIcon {
+    background: url('/Resources/Images/mobile/ratingsAlt.png') no-repeat;
+    width: 32px;
+    height: 29px;
+    margin: 21px 0 0 19px;
+  }
+  #nav .button:active .statsIcon {
+    background: url('/Resources/Images/mobile/statsAlt.png') no-repeat;
+    width: 32px;
+    height: 27px;
+    margin: 22px 0 0 19px;
   }
   #nav .button.active {
     background: #3da4ba;
+  }
+  #nav .button .text {
+    display: none;
+  }
+  #nav .button .lunchIcon {
+    background: url('/Resources/Images/mobile/lunch.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 19px 0 0 19px;
+  }
+  #nav .button .historyIcon {
+    background: url('/Resources/Images/mobile/history.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 19px 0 0 19px;
+  }
+  #nav .button .ratingsIcon {
+    background: url('/Resources/Images/mobile/ratings.png') no-repeat;
+    width: 32px;
+    height: 29px;
+    margin: 21px 0 0 19px;
+  }
+  #nav .button .statsIcon {
+    background: url('/Resources/Images/mobile/stats.png') no-repeat;
+    width: 32px;
+    height: 27px;
+    margin: 22px 0 0 19px;
   }
   #nav footer {
     display: none;
@@ -110,21 +174,22 @@ body {
   #content #info {
     width: 100%;
     position: absolute;
-    top: 0;
-    right: 10px;
-    left: 10px;
+    top: 80px;
+    right: 20px;
+    left: 20px;
   }
   #secondaryContent {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 42%;
+    margin-left: 2px;
   }
   #secondaryContent #badges {
-    background: #fff;
-    min-width: 150px;
-    width: auto;
-    max-width: 500px;
-    height: 50px;
+    background: url('/Resources/Images/repeatWhite.png') repeat;
+    min-width: 50px;
+    width: 50px;
+    max-width: 50px;
+    height: 20px;
     overflow: hidden;
   }
 }
@@ -133,7 +198,7 @@ body {
     width: 100%;
     height: 150px;
     position: absolute;
-    top: 10px;
+    top: 0;
     bottom: 10px;
     left: 0;
     z-index: 1;
@@ -146,7 +211,8 @@ body {
   #nav #title {
     background: #fff;
     width: 20%;
-    height: 150px;
+    height: 102px;
+    padding-top: 48px;
   }
   #nav #title:after {
     content: "";
@@ -157,13 +223,96 @@ body {
     left: 100%;
     top: 46%;
   }
+  #nav #title .logo {
+    background: url('/Resources/Images/WFL-Logo-799.png') no-repeat;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto;
+  }
   #nav .button {
-    background: url('/Resources/Images/repeatWhite.png') repeat;
     width: 20%;
     height: 150px;
   }
+  #nav .button:hover {
+    background: #fff;
+  }
+  #nav .button:hover .lunchIcon {
+    background: url('/Resources/Images/mobile/lunchAlt.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 59px auto 0 auto;
+  }
+  #nav .button:hover .historyIcon {
+    background: url('/Resources/Images/mobile/historyAlt.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 59px auto 0 auto;
+  }
+  #nav .button:hover .ratingsIcon {
+    background: url('/Resources/Images/mobile/ratingsAlt.png') no-repeat;
+    width: 32px;
+    height: 29px;
+    margin: 61px auto 0 auto;
+  }
+  #nav .button:hover .statsIcon {
+    background: url('/Resources/Images/mobile/statsAlt.png') no-repeat;
+    width: 32px;
+    height: 27px;
+    margin: 61px auto 0 auto;
+  }
   #nav .button.active {
     background: #3da4ba;
+  }
+  #nav .button.active:hover .lunchIcon {
+    background: url('/Resources/Images/mobile/lunch.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 59px auto 0 auto;
+  }
+  #nav .button.active:hover .historyIcon {
+    background: url('/Resources/Images/mobile/history.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 59px auto 0 auto;
+  }
+  #nav .button.active:hover .ratingsIcon {
+    background: url('/Resources/Images/mobile/ratings.png') no-repeat;
+    width: 32px;
+    height: 29px;
+    margin: 61px auto 0 auto;
+  }
+  #nav .button.active:hover .statsIcon {
+    background: url('/Resources/Images/mobile/stats.png') no-repeat;
+    width: 32px;
+    height: 27px;
+    margin: 61px auto 0 auto;
+  }
+  #nav .button .text {
+    display: none;
+  }
+  #nav .button .lunchIcon {
+    background: url('/Resources/Images/mobile/lunch.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 59px auto 0 auto;
+  }
+  #nav .button .historyIcon {
+    background: url('/Resources/Images/mobile/history.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    margin: 59px auto 0 auto;
+  }
+  #nav .button .ratingsIcon {
+    background: url('/Resources/Images/mobile/ratings.png') no-repeat;
+    width: 32px;
+    height: 29px;
+    margin: 61px auto 0 auto;
+  }
+  #nav .button .statsIcon {
+    background: url('/Resources/Images/mobile/stats.png') no-repeat;
+    width: 32px;
+    height: 27px;
+    margin: 61px auto 0 auto;
   }
   #nav footer {
     width: 100%;
@@ -210,26 +359,149 @@ body {
   }
   #nav #title {
     background: #fff;
-    width: 150px;
-    height: 150px;
+    width: 137px;
+    height: 116px;
+    padding-top: 34px;
+    padding-left: 13px;
   }
   #nav #title:after {
     content: "";
     position: absolute;
+    z-index: 1;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid #fff;
     bottom: -5px;
     left: 46%;
   }
+  #nav #title .logo {
+    background: url('/Resources/Images/WFL-Logo-960.png') no-repeat;
+    width: 123px;
+    height: 82px;
+  }
   #nav .button {
-    background: url('/Resources/Images/repeatWhite.png') repeat;
     width: 150px;
     height: 150px;
     margin-bottom: 1px;
+    text-align: center;
+    position: relative;
+  }
+  #nav .button:hover {
+    background: #fff;
+  }
+  #nav .button:hover .text {
+    color: #3da4ba;
+  }
+  #nav .button:hover .lunchIcon {
+    background: url('/Resources/Images/desktop/lunch-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button:hover .historyIcon {
+    background: url('/Resources/Images/desktop/history-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button:hover .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratings-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button:hover .statsIcon {
+    background: url('/Resources/Images/desktop/stats-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
   #nav .button.active {
     background: #3da4ba;
+  }
+  #nav .button.active:hover .text {
+    color: #fff;
+    font-size: 1.825em;
+    line-height: 30px;
+    padding-top: 38%;
+  }
+  #nav .button.active:hover .lunchIcon {
+    background: url('/Resources/Images/desktop/lunch-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button.active:hover .historyIcon {
+    background: url('/Resources/Images/desktop/history-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button.active:hover .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratings-24.png') no-repeat;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button.active:hover .statsIcon {
+    background: url('/Resources/Images/desktop/stats-24.png') no-repeat;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .text {
+    color: #fff;
+    font-size: 1.825em;
+    line-height: 30px;
+    padding-top: 38%;
+  }
+  #nav .button .lunchIcon {
+    background: url('/Resources/Images/desktop/lunch-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .historyIcon {
+    background: url('/Resources/Images/desktop/history-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratings-24.png') no-repeat;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .statsIcon {
+    background: url('/Resources/Images/desktop/stats-24.png') no-repeat;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
   #nav footer {
     width: 150px;
@@ -252,8 +524,24 @@ body {
     right: 10px;
     bottom: 10px;
   }
+  #secondaryContent #veto {
+    background: url('/Resources/Images/repeatRed.png') repeat;
+    min-width: 200px;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  #secondaryContent #overrides {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    min-width: 200px;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
   #secondaryContent #badges {
-    background: #fff;
+    background: url('/Resources/Images/repeatWhite.png') repeat;
     min-width: 150px;
     width: auto;
     max-width: 500px;
@@ -273,43 +561,149 @@ body {
   }
   #nav #title {
     background: #fff;
-    width: 150px;
-    height: 97px;
-    padding-top: 53px;
+    width: 137px;
+    height: 116px;
+    padding-top: 34px;
+    padding-left: 13px;
   }
   #nav #title:after {
     content: "";
     position: absolute;
+    z-index: 1;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid #fff;
     bottom: -5px;
     left: 46%;
   }
-  #nav #title .small {
-    font-size: 0.875em;
-    line-height: 14px;
-    color: #000;
-    display: block;
-    text-align: center;
-  }
-  #nav #title .large {
-    font-size: 1.875em;
-    line-height: 30px;
-    font-weight: bold;
-    color: #2c8ca2;
-    display: block;
-    text-align: center;
-    letter-spacing: -1px;
+  #nav #title .logo {
+    background: url('/Resources/Images/WFL-Logo-960.png') no-repeat;
+    width: 123px;
+    height: 82px;
   }
   #nav .button {
-    background: url('/Resources/Images/repeatWhite.png') repeat;
     width: 150px;
     height: 150px;
     margin-bottom: 1px;
+    text-align: center;
+    position: relative;
+  }
+  #nav .button:hover {
+    background: #fff;
+  }
+  #nav .button:hover .text {
+    color: #3da4ba;
+  }
+  #nav .button:hover .lunchIcon {
+    background: url('/Resources/Images/desktop/lunch-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button:hover .historyIcon {
+    background: url('/Resources/Images/desktop/history-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button:hover .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratings-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button:hover .statsIcon {
+    background: url('/Resources/Images/desktop/stats-24-Alt.png') no-repeat;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
   #nav .button.active {
     background: #3da4ba;
+  }
+  #nav .button.active:hover .text {
+    color: #fff;
+    font-size: 1.825em;
+    line-height: 30px;
+    padding-top: 38%;
+  }
+  #nav .button.active:hover .lunchIcon {
+    background: url('/Resources/Images/desktop/lunch-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button.active:hover .historyIcon {
+    background: url('/Resources/Images/desktop/history-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button.active:hover .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratings-24.png') no-repeat;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button.active:hover .statsIcon {
+    background: url('/Resources/Images/desktop/stats-24.png') no-repeat;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .text {
+    color: #fff;
+    font-size: 1.825em;
+    line-height: 30px;
+    padding-top: 38%;
+  }
+  #nav .button .lunchIcon {
+    background: url('/Resources/Images/desktop/lunch-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .historyIcon {
+    background: url('/Resources/Images/desktop/history-24.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratings-24.png') no-repeat;
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  #nav .button .statsIcon {
+    background: url('/Resources/Images/desktop/stats-24.png') no-repeat;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
   #nav footer {
     width: 150px;
@@ -329,11 +723,27 @@ body {
   }
   #secondaryContent {
     position: absolute;
-    right: 10px;
+    right: 0;
     bottom: 10px;
   }
+  #secondaryContent #veto {
+    background: url('/Resources/Images/repeatRed.png') repeat;
+    min-width: 200px;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  #secondaryContent #overrides {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    min-width: 200px;
+    width: auto;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
   #secondaryContent #badges {
-    background: #fff;
+    background: url('/Resources/Images/repeatWhite.png') repeat;
     min-width: 150px;
     width: auto;
     max-width: 500px;
@@ -351,9 +761,7 @@ body {
   }
   #nav {
     position: relative;
-    width: 620px;
     height: 100px;
-    left: 186px;
     padding-top: 25px;
   }
   #nav #title,
@@ -361,45 +769,78 @@ body {
   #nav footer {
     float: left;
     margin-bottom: 0;
-    margin-right: 1px;
-    width: 75px;
-    height: 75px;
   }
   #nav #title {
     margin-right: 0;
-    width: 222px;
-    height: 50px;
-    padding-top: 25px;
+    width: 326px;
+    height: 63px;
+    padding-top: 12px;
+    position: absolute;
+    left: 186px;
   }
-  #nav #title:after {
-    border-left: 5px solid #fff;
-    border-right: none;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    bottom: 43%;
-    left: 222px;
+  #nav #title .logo {
+    background: url('/Resources/Images/WFL-Logo.png') no-repeat;
+    width: 306px;
+    height: 54px;
   }
-  #nav #title .small {
-    font-size: 1.875em;
-    line-height: 20px;
-    color: #333;
-    display: inline-block;
-    margin-right: 4px;
-    letter-spacing: -1px;
+  #nav #navWrap {
+    width: 173px;
+    position: absolute;
+    right: 186px;
   }
-  #nav #title .large {
-    font-size: 1.875em;
-    line-height: 20px;
-    color: #2c8ca2;
-    display: inline-block;
-    letter-spacing: -1px;
+  #nav #navWrap .button {
+    width: 32px;
+    height: 53px;
+    padding-top: 22px;
+    margin-left: 15px;
   }
-  #nav .button {
-    background: url('/Resources/Images/repeatBlue.png') repeat;
+  #nav #navWrap .button:first-child {
+    margin-left: 0;
+  }
+  #nav #navWrap .button.active {
+    background: transparent;
+  }
+  #nav #navWrap .button.active .lunchIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button.active .historyIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button.active .ratingsIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button.active .statsIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button .text {
+    display: none;
+  }
+  #nav #navWrap .button .lunchIcon {
+    background: url('/Resources/Images/desktop/lunchAlt.png') no-repeat;
+    width: 32px;
+    height: 31px;
+    opacity: 0.5;
+  }
+  #nav #navWrap .button .historyIcon {
+    background: url('/Resources/Images/desktop/historyAlt.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+  }
+  #nav #navWrap .button .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratingsAlt.png') no-repeat;
+    width: 32px;
+    height: 29px;
+    opacity: 0.5;
+  }
+  #nav #navWrap .button .statsIcon {
+    background: url('/Resources/Images/desktop/statsAlt.png') no-repeat;
+    width: 32px;
+    height: 27px;
+    opacity: 0.5;
   }
   #nav footer {
-    width: 30px;
-    height: 75px;
+    display: none;
   }
   #content {
     position: relative;
@@ -415,14 +856,14 @@ body {
     position: relative;
   }
   #secondaryContent {
-    float: right;
-    width: 1024px;
-    margin-right: 186px;
+    position: relative;
     margin-top: 25px;
   }
   #secondaryContent #badges {
     background: #000;
+    position: relative;
     float: right;
+    margin-right: 186px;
   }
 }
 @media only screen and (min-width: 1651px) {
@@ -445,15 +886,12 @@ body {
   #nav footer {
     float: left;
     margin-bottom: 0;
-    margin-right: 1px;
-    width: 75px;
-    height: 75px;
   }
   #nav #title {
     margin-right: 0;
-    width: 222px;
-    height: 50px;
-    padding-top: 25px;
+    width: 326px;
+    height: 63px;
+    padding-top: 12px;
   }
   #nav #title:after {
     border-left: 5px solid #fff;
@@ -461,29 +899,70 @@ body {
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     bottom: 43%;
-    left: 222px;
+    left: 326px;
   }
-  #nav #title .small {
-    font-size: 1.875em;
-    line-height: 20px;
-    color: #333;
-    display: inline-block;
-    margin-right: 4px;
-    letter-spacing: -1px;
+  #nav #title .logo {
+    background: url('/Resources/Images/WFL-Logo.png') no-repeat;
+    width: 306px;
+    height: 54px;
   }
-  #nav #title .large {
-    font-size: 1.875em;
-    line-height: 20px;
-    color: #2c8ca2;
-    display: inline-block;
-    letter-spacing: -1px;
+  #nav #navWrap {
+    width: 173px;
+    float: right;
   }
-  #nav .button {
-    background: url('/Resources/Images/repeatBlue.png') repeat;
+  #nav #navWrap .button {
+    width: 32px;
+    height: 53px;
+    padding-top: 22px;
+    margin-left: 15px;
+  }
+  #nav #navWrap .button:first-child {
+    margin-left: 0;
+  }
+  #nav #navWrap .button.active {
+    background: transparent;
+  }
+  #nav #navWrap .button.active .lunchIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button.active .historyIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button.active .ratingsIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button.active .statsIcon {
+    opacity: 1.0;
+  }
+  #nav #navWrap .button .text {
+    display: none;
+  }
+  #nav #navWrap .button .lunchIcon {
+    background: url('/Resources/Images/desktop/lunchAlt.png') no-repeat;
+    width: 32px;
+    height: 31px;
+    opacity: 0.5;
+  }
+  #nav #navWrap .button .historyIcon {
+    background: url('/Resources/Images/desktop/historyAlt.png') no-repeat;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+  }
+  #nav #navWrap .button .ratingsIcon {
+    background: url('/Resources/Images/desktop/ratingsAlt.png') no-repeat;
+    width: 32px;
+    height: 29px;
+    opacity: 0.5;
+  }
+  #nav #navWrap .button .statsIcon {
+    background: url('/Resources/Images/desktop/statsAlt.png') no-repeat;
+    width: 32px;
+    height: 27px;
+    opacity: 0.5;
   }
   #nav footer {
-    width: 30px;
-    height: 75px;
+    display: none;
   }
   #content {
     position: relative;

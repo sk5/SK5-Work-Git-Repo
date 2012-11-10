@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/Resources/CSS/StyleSheet.css" type="text/css"  rel="stylesheet" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
     <div id="mask"></div>
@@ -13,12 +13,26 @@
     <div id="threshold">
 
         <div id="nav">
-            <div id="title"><span class="small">what's for</span><span class="large">lunch?</span></div>
-            <div class="button active"></div>
-            <div class="button"></div>
-            <div class="button"></div>
-            <div class="button"></div>
-            <footer></footer>
+            <div id="title"><div class="logo"></div></div>
+            <div id="navWrap">
+                <div class="button active">
+                    <div class="text">lunch</div>
+                    <div class="lunchIcon"></div>
+                </div>
+                <div class="button">
+                    <div class="text">history</div>
+                    <div class="historyIcon"></div>
+                </div>
+                <div class="button">
+                    <div class="text">ratings</div>
+                    <div class="ratingsIcon"></div>
+                </div>
+                <div class="button">
+                    <div class="text">stats</div>
+                    <div class="statsIcon"></div>
+                </div>
+                <footer></footer>
+            </div>
         </div>
 
         <div>
