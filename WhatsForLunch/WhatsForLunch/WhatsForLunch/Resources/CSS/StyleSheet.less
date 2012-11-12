@@ -9,7 +9,7 @@
 				&:after { content: ""; position: absolute; }
 	   }
 	   .button { background: url('/Resources/Images/repeatWhite.png') repeat; cursor: pointer;
-				 &.active { background: #3da4ba; cursor: auto; }
+				 &.active { background: #00addc; cursor: auto; }
 	   }
 	   footer { background: #fff; }
 }
@@ -27,7 +27,7 @@
 
 /* SECONDARY CONTENT - BAGDES/VETOES/OVERRIDES */
 #secondaryContent {
-		 #badges { min-width: 150px; width: auto; max-width: 500px; height: 50px; overflow: hidden; }
+		 #badges { width: auto; height: 50px; overflow: hidden; }
 }
 
 @media only screen and (max-width: 480px) {
@@ -45,7 +45,7 @@
 								.ratingsIcon { background: url('/Resources/Images/mobile/ratingsAlt.png') no-repeat; width: 32px; height: 29px; margin: 21px 0 0 19px; }
 								.statsIcon { background: url('/Resources/Images/mobile/statsAlt.png') no-repeat; width: 32px; height: 27px; margin: 22px 0 0 19px; }
 					 }
-					 &.active { background: #3da4ba; }
+					 &.active { background: #00addc; }
 					 .text { display: none; }
 					 .lunchIcon { background: url('/Resources/Images/mobile/lunch.png') no-repeat; width: 32px; height: 32px; margin: 19px 0 0 19px; }
 					 .historyIcon { background: url('/Resources/Images/mobile/history.png') no-repeat; width: 32px; height: 32px; margin: 19px 0 0 19px; }
@@ -81,7 +81,7 @@
 								.ratingsIcon { background: url('/Resources/Images/mobile/ratingsAlt.png') no-repeat; width: 32px; height: 29px; margin: 61px auto 0 auto; }
 								.statsIcon { background: url('/Resources/Images/mobile/statsAlt.png') no-repeat; width: 32px; height: 27px; margin: 61px auto 0 auto; }
 					 }
-					 &.active { background: #3da4ba; 
+					 &.active { background: #00addc; 
 								&:hover {
 										  .lunchIcon { background: url('/Resources/Images/mobile/lunch.png') no-repeat; width: 32px; height: 32px; margin: 59px auto 0 auto; }
 										  .historyIcon { background: url('/Resources/Images/mobile/history.png') no-repeat; width: 32px; height: 32px; margin: 59px auto 0 auto; }
@@ -102,8 +102,11 @@
 			   #info { width: 100%; position: absolute; right: 10px; left: 10px; }
 	}
 
-	#secondaryContent { position: absolute; right: 10px; bottom: 10px;
-			 #badges { background: #fff; min-width: 150px; width: auto; max-width: 500px; height: 50px; overflow: hidden; }
+	#secondaryContent { position: absolute; right: 10px; bottom: 10px; left: 10px; width: auto;
+             #veto { background: url('/Resources/Images/repeatRed.png') repeat; width: 32%; height: 100px; overflow: hidden; margin: 0 2% 0 0; float: left; }
+			 #overrides { background: url('/Resources/Images/repeatBlue.png') repeat; width: 32%; height: 100px; overflow: hidden; margin: 0 2% 0 0; float: left; }
+			 #badges { background: url('/Resources/Images/repeatWhite.png') repeat; width: 32%; height: 100px; overflow: hidden; margin: 0; float: left; }
+             #veto,#overrides,#badges { color: #fff; font-size: 1.5em; }
 	}
 
 }
@@ -118,13 +121,13 @@
 		   }
 		   .button { width: 150px; height: 150px; margin-bottom: 1px; text-align: center; position: relative;
 					 &:hover { background: #fff;
-							   .text { color: #3da4ba; }
+							   .text { color: #00addc; }
 							   .lunchIcon { background: url('/Resources/Images/desktop/lunch-24-Alt.png') no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
 							   .historyIcon { background: url('/Resources/Images/desktop/history-24-Alt.png') no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
 							   .ratingsIcon { background: url('/Resources/Images/desktop/ratings-24-Alt.png') no-repeat; width: 24px; height: 22px; position: absolute; right: 10px; bottom: 10px; }
 							   .statsIcon { background: url('/Resources/Images/desktop/stats-24-Alt.png') no-repeat; width: 24px; height: 20px; position: absolute; right: 10px; bottom: 10px; }
 					 }
-					 &.active { background: #3da4ba; 
+					 &.active { background: #00addc; 
 								&:hover {
 										  .text { color: #fff; font-size: 1.825em; line-height: 30px; padding-top: 38%; }
 										  .lunchIcon { background: url('/Resources/Images/desktop/lunch-24.png') no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
@@ -146,7 +149,7 @@
 			   #info { width: 100%; }
 	}
 
-	#secondaryContent { position: absolute; right: 10px; bottom: 10px;
+	#secondaryContent { position: absolute; right: 0; bottom: 10px;
 			 #veto { background: url('/Resources/Images/repeatRed.png') repeat; min-width: 200px; width: auto; height: 50px; overflow: hidden; margin-bottom: 5px; }
 			 #overrides { background: url('/Resources/Images/repeatBlue.png') repeat; min-width: 200px; width: auto; height: 50px; overflow: hidden; margin-bottom: 5px; }
 			 #badges { background: url('/Resources/Images/repeatWhite.png') repeat; min-width: 150px; width: auto; max-width: 500px; height: 50px; overflow: hidden; }
@@ -164,13 +167,13 @@
 		   }
 		   .button { width: 150px; height: 150px; margin-bottom: 1px; text-align: center; position: relative;
 					 &:hover { background: #fff;
-							   .text { color: #3da4ba; }
-							   .lunchIcon { background: url('/Resources/Images/desktop/lunch-24-Alt.png') no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
-							   .historyIcon { background: url('/Resources/Images/desktop/history-24-Alt.png') no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
-							   .ratingsIcon { background: url('/Resources/Images/desktop/ratings-24-Alt.png') no-repeat; width: 24px; height: 22px; position: absolute; right: 10px; bottom: 10px; }
-							   .statsIcon { background: url('/Resources/Images/desktop/stats-24-Alt.png') no-repeat; width: 24px; height: 20px; position: absolute; right: 10px; bottom: 10px; }
+							   .text { color: #00addc; }
+							   .lunchIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -37px -130px no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
+							   .historyIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -37px -36px no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
+							   .ratingsIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -37px -99px no-repeat; width: 24px; height: 22px; position: absolute; right: 10px; bottom: 10px; }
+							   .statsIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -37px -70px no-repeat; width: 24px; height: 20px; position: absolute; right: 10px; bottom: 10px; }
 					 }
-					 &.active { background: #3da4ba; 
+					 &.active { background: #00addc; 
 								&:hover {
 										  .text { color: #fff; font-size: 1.825em; line-height: 30px; padding-top: 38%; }
 										  .lunchIcon { background: url('/Resources/Images/desktop/lunch-24.png') no-repeat; width: 24px; height: 24px; position: absolute; right: 10px; bottom: 10px; }
@@ -220,10 +223,10 @@
 										.statsIcon { opacity: 1.0; }
 								}
 								.text { display: none; }
-								.lunchIcon { background: url('/Resources/Images/desktop/lunchAlt.png') no-repeat; width: 32px; height: 31px; opacity: 0.5; }
-								.historyIcon { background: url('/Resources/Images/desktop/historyAlt.png') no-repeat; width: 32px; height: 32px; opacity: 0.5; }
-								.ratingsIcon { background: url('/Resources/Images/desktop/ratingsAlt.png') no-repeat; width: 32px; height: 29px; opacity: 0.5; }
-								.statsIcon { background: url('/Resources/Images/desktop/statsAlt.png') no-repeat; width: 32px; height: 27px; opacity: 0.5; }
+								.lunchIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -130px no-repeat; width: 32px; height: 31px; opacity: 0.5; }
+								.historyIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -36px no-repeat; width: 32px; height: 32px; opacity: 0.5; }
+								.ratingsIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -99px no-repeat; width: 32px; height: 29px; opacity: 0.5; }
+								.statsIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -70px no-repeat; width: 32px; height: 27px; opacity: 0.5; }
 					  }
 		   }
 		   footer { display: none; }
@@ -261,10 +264,10 @@
 										.statsIcon { opacity: 1.0; }
 								}
 								.text { display: none; }
-								.lunchIcon { background: url('/Resources/Images/desktop/lunchAlt.png') no-repeat; width: 32px; height: 31px; opacity: 0.5; }
-								.historyIcon { background: url('/Resources/Images/desktop/historyAlt.png') no-repeat; width: 32px; height: 32px; opacity: 0.5; }
-								.ratingsIcon { background: url('/Resources/Images/desktop/ratingsAlt.png') no-repeat; width: 32px; height: 29px; opacity: 0.5; }
-								.statsIcon { background: url('/Resources/Images/desktop/statsAlt.png') no-repeat; width: 32px; height: 27px; opacity: 0.5; }
+								.lunchIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -130px no-repeat; width: 32px; height: 31px; opacity: 0.5; }
+								.historyIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -36px no-repeat; width: 32px; height: 32px; opacity: 0.5; }
+								.ratingsIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -99px no-repeat; width: 32px; height: 29px; opacity: 0.5; }
+								.statsIcon { background: url('/Resources/Images/desktop/spriteDesktop.png') -2px -70px no-repeat; width: 32px; height: 27px; opacity: 0.5; }
 					  }
 		   }
 		   footer { display: none; }

@@ -136,6 +136,7 @@
     <Content Include="Resources\Images\desktop\ratings-24-Alt.png" />
     <Content Include="Resources\Images\desktop\ratings-24.png" />
     <Content Include="Resources\Images\desktop\ratingsAlt.png" />
+    <Content Include="Resources\Images\desktop\spriteDesktop.png" />
     <Content Include="Resources\Images\desktop\stats-24-Alt.png" />
     <Content Include="Resources\Images\desktop\stats-24.png" />
     <Content Include="Resources\Images\desktop\statsAlt.png" />
