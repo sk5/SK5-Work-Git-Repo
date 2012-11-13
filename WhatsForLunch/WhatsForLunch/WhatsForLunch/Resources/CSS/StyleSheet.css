@@ -172,9 +172,47 @@ body {
   #content #info {
     width: 100%;
     position: absolute;
-    top: 80px;
+    top: 20px;
     right: 20px;
     left: 20px;
+  }
+  #content #info .primary {
+    font-size: 2.25em;
+    color: #fff;
+    margin-top: 6px;
+    margin-left: 10px;
+  }
+  #content #info .primary .usersWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 14px;
+    text-align: right;
+  }
+  #content #info .primary .usersWrap p {
+    display: none;
+  }
+  #content #info .primary p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+  }
+  #content #info .primary .listingWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  #content #info .primary .listingWrap .listing {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    width: 140px;
+    height: 140px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+  }
+  #content #info .primary .listingWrap .listing:last-child {
+    margin-right: 0;
   }
   #secondaryContent {
     position: fixed;
@@ -330,6 +368,48 @@ body {
     position: absolute;
     right: 10px;
     left: 10px;
+  }
+  #content #info .primary {
+    font-size: 2.25em;
+    color: #fff;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  #content #info .primary .usersWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  #content #info .primary .usersWrap p {
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+    padding-left: 10px;
+    color: #92e9ff;
+  }
+  #content #info .primary p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+  }
+  #content #info .primary .listingWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  #content #info .primary .listingWrap .listing {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    width: 120px;
+    height: 120px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+  }
+  #content #info .primary .listingWrap .listing:last-child {
+    margin-right: 0;
   }
   #secondaryContent {
     position: absolute;
@@ -536,38 +616,75 @@ body {
     bottom: 0;
     left: 0;
     overflow: hidden;
-    padding-left: 170px;
+    padding-left: 190px;
   }
   #content #info {
     width: 100%;
+    position: relative;
+  }
+  #content #info .primary {
+    font-size: 2.25em;
+    color: #fff;
+    margin-top: 225px;
+  }
+  #content #info .primary .usersWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  #content #info .primary .usersWrap p {
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+    padding-left: 10px;
+    color: #92e9ff;
+  }
+  #content #info .primary p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+  }
+  #content #info .primary .listingWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  #content #info .primary .listingWrap .listing {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    width: 120px;
+    height: 120px;
+    margin-right: 5px;
+    float: left;
+  }
+  #content #info .primary .listingWrap .listing:last-child {
+    margin-right: 0;
   }
   #secondaryContent {
     position: absolute;
-    right: 0;
+    right: 10px;
     bottom: 10px;
   }
   #secondaryContent #veto {
     background: url('/Resources/Images/repeatRed.png') repeat;
-    min-width: 200px;
-    width: auto;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     overflow: hidden;
     margin-bottom: 5px;
   }
   #secondaryContent #overrides {
     background: url('/Resources/Images/repeatBlue.png') repeat;
-    min-width: 200px;
-    width: auto;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     overflow: hidden;
     margin-bottom: 5px;
   }
   #secondaryContent #badges {
     background: url('/Resources/Images/repeatWhite.png') repeat;
-    min-width: 150px;
-    width: auto;
-    max-width: 500px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     overflow: hidden;
   }
 }
@@ -738,10 +855,51 @@ body {
     bottom: 0;
     left: 0;
     overflow: hidden;
-    padding-left: 170px;
+    padding-left: 190px;
   }
   #content #info {
     width: 100%;
+    position: relative;
+  }
+  #content #info .primary {
+    font-size: 2.25em;
+    color: #fff;
+    margin-top: 225px;
+  }
+  #content #info .primary .usersWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  #content #info .primary .usersWrap p {
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+    padding-left: 10px;
+    color: #92e9ff;
+  }
+  #content #info .primary p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+  }
+  #content #info .primary .listingWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  #content #info .primary .listingWrap .listing {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    width: 120px;
+    height: 120px;
+    margin-right: 5px;
+    float: left;
+  }
+  #content #info .primary .listingWrap .listing:last-child {
+    margin-right: 0;
   }
   #secondaryContent {
     position: absolute;
@@ -877,6 +1035,47 @@ body {
   #content #info {
     position: relative;
   }
+  #content #info .primary {
+    font-size: 2.25em;
+    color: #fff;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  #content #info .primary .usersWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  #content #info .primary .usersWrap p {
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+    padding-left: 10px;
+    color: #92e9ff;
+  }
+  #content #info .primary p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+  }
+  #content #info .primary .listingWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  #content #info .primary .listingWrap .listing {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    width: 120px;
+    height: 120px;
+    margin-right: 5px;
+    float: left;
+  }
+  #content #info .primary .listingWrap .listing:last-child {
+    margin-right: 0;
+  }
   #secondaryContent {
     position: relative;
     margin-top: 25px;
@@ -998,6 +1197,47 @@ body {
   }
   #content #info {
     position: relative;
+  }
+  #content #info .primary {
+    font-size: 2.25em;
+    color: #fff;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  #content #info .primary .usersWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  #content #info .primary .usersWrap p {
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 4px;
+    padding-left: 10px;
+    color: #92e9ff;
+  }
+  #content #info .primary p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+  }
+  #content #info .primary .listingWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  #content #info .primary .listingWrap .listing {
+    background: url('/Resources/Images/repeatBlue.png') repeat;
+    width: 120px;
+    height: 120px;
+    margin-right: 5px;
+    float: left;
+  }
+  #content #info .primary .listingWrap .listing:last-child {
+    margin-right: 0;
   }
   #secondaryContent {
     width: 1280px;

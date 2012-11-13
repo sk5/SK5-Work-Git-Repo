@@ -114,6 +114,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="content\images\user001.png" />
     <Content Include="Global.asax" />
     <None Include="Resources\CSS\StyleSheet.less" />
     <Content Include="Resources\CSS\StyleSheet.css">
