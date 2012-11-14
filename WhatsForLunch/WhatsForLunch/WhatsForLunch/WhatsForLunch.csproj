@@ -123,6 +123,7 @@
     <Content Include="Resources\CSS\StyleSheet.min.css">
       <DependentUpon>StyleSheet.less</DependentUpon>
     </Content>
+    <Content Include="Resources\Images\badges-32.png" />
     <Content Include="Resources\Images\BG-Burger.png" />
     <Content Include="Resources\Images\BG-Chicken.png" />
     <Content Include="Resources\Images\BG-RAW-Images\Burger.jpg" />
@@ -141,6 +142,8 @@
     <Content Include="Resources\Images\desktop\stats-24-Alt.png" />
     <Content Include="Resources\Images\desktop\stats-24.png" />
     <Content Include="Resources\Images\desktop\statsAlt.png" />
+    <Content Include="Resources\Images\lunchLogo.png" />
+    <Content Include="Resources\Images\lunchLogo120.png" />
     <Content Include="Resources\Images\mobile\history.png" />
     <Content Include="Resources\Images\mobile\historyAlt.png" />
     <Content Include="Resources\Images\mobile\lunch.png" />
@@ -149,10 +152,12 @@
     <Content Include="Resources\Images\mobile\ratingsAlt.png" />
     <Content Include="Resources\Images\mobile\stats.png" />
     <Content Include="Resources\Images\mobile\statsAlt.png" />
+    <Content Include="Resources\Images\overrides-32.png" />
     <Content Include="Resources\Images\repeatBlack.png" />
     <Content Include="Resources\Images\repeatBlue.png" />
     <Content Include="Resources\Images\repeatRed.png" />
     <Content Include="Resources\Images\repeatWhite.png" />
+    <Content Include="Resources\Images\veto-32.png" />
     <Content Include="Resources\Images\WFL-Logo-799.png" />
     <Content Include="Resources\Images\WFL-Logo-960.png" />
     <Content Include="Resources\Images\WFL-Logo.png" />
