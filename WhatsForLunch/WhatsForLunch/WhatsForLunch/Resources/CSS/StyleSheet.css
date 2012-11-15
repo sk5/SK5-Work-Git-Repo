@@ -1270,15 +1270,14 @@ body {
   #content #info .primary {
     font-size: 2.25em;
     color: #fff;
-    margin-top: 100px;
-    margin-left: 185px;
+    margin: 60px 185px 0 185px;
   }
   #content #info .primary .usersWrap {
     height: auto;
     overflow: hidden;
     margin-bottom: 14px;
     position: absolute;
-    bottom: -338px;
+    bottom: -104px;
     right: 185px;
     left: 0;
     text-align: right;
@@ -1290,18 +1289,21 @@ body {
     margin: 0;
     padding: 0;
     font-size: inherit;
+    text-align: center;
+    font-size: 1.5em;
   }
   #content #info .primary .listingWrap {
-    width: 100%;
+    width: 815px;
     height: auto;
     overflow: hidden;
-    margin-top: 30px;
+    margin: 220px auto 0 auto;
   }
   #content #info .primary .listingWrap .listing {
     background: url('/Resources/Images/repeatBlue.png') repeat;
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     margin-right: 5px;
+    margin-bottom: 4px;
     float: left;
   }
   #content #info .primary .listingWrap .listing:last-child {
