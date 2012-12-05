@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div id="feature">
+
+</div>
+
+<div id="projectsTitle">
+    <div id="mediaTitleSize">
+        <h2>Collection</h2>
+    </div>
+</div>
+
+<div id="projectsList">
+    <div id="mediaListSize">
+
+        <div class="project">
+            <img src="" />
+            <div class="like">
+                <div class="likeBtn">8</div>
+                likes
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="" />
+            <div class="like">
+                <div class="likeBtn">4</div>
+                likes
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="" />
+            <div class="like">
+                <div class="likeBtn">8</div>
+                likes
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="" />
+            <div class="like">
+                <div class="likeBtn">3</div>
+                likes
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="" />
+            <div class="like">
+                <div class="likeBtn">9</div>
+                likes
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        var inAnimation = new Array();
+
+        if ($.browser.msie) {
+            $('.project').hover(function () {
+                if (!$(this).children(".like").hasClass('animated')) {
+                    $(this).children(".like").dequeue().stop().animate({ bottom: '0' }, 200);
+                }
+            }, function () {
+                $(this).children(".like").addClass('animated').animate({ bottom: '45px' }, 0, "linear", function () {
+                    $(this).removeClass('animated').dequeue();
+                });
+            });
+        };
+
+    });
+           
+
+
+        //if ($.browser.msie) {
+            //$('.project').hover(function () {
+                //$(this).children(".like").filter(':not(:animated)').animate({ bottom: '-5px' }, 200, function () {
+                    //$(this).animate({ bottom: '4px' }, 100, function () {
+                        //$(this).animate({ bottom: '0' }, 100);
+                    //});
+                //});
+            //}, function () {
+                //$(this).children(".like").animate({ bottom: '45px' });
+            //});
+        //}
+
+        //$('.project').mouseout(function () {
+            //if ($.browser.msie) {
+                //$(this).children(".like").css({ bottom: '45px' });
+                //$(this).stop(true, true);
+                //$(this).siblings().children(".like").css({ bottom: '45px' });
+
+            //}
+        //});
+
+        //$('.project').mouseenter(function () {
+            //if ($.browser.msie) {
+                //$(this).children(".like").animate({ bottom: '-5px' }, 200, function() {
+                    //$(this).animate({ bottom: '4px' }, 100, function () {
+                        //$(this).animate({ bottom: '0' }, 100);
+                    //});
+                //});
+                //$(this).siblings().children(".like").css({ bottom: '45px' });
+            //}
+        //});
+
+</script>
