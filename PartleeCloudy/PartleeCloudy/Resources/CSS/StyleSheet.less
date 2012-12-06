@@ -2,11 +2,11 @@
 * { font-family: 'Segoe UI', 'Helvetica', sans-serif; font-weight: lighter; font-size: 16px; }
 
 /* Media Query -- Reusables */
-@mediaWidth:				1650px;
+@mediaWidth:				1700px;
 @mediaProjectHome:			300px;
-@mediaProjectHomeMargin:	15px;
+@mediaProjectHomeMargin:	20px;
 
-#feature { background: #3399ff; width: 100%; height: 400px; }
+#feature { background: #3399ff; width: 100%; height: 300px; }
 
 
 #projectsTitle { width: 100%; height: auto; overflow: hidden; 
@@ -15,19 +15,26 @@
 				 }
 }
 
-#projectsList { width: 100%; height: auto; overflow: hidden;
+#projectsList { width: 100%; height: auto; overflow: hidden; padding-bottom: 100px;
 				#mediaListSize { width: @mediaWidth; margin: 0 auto; 
-							 .project { width: @mediaProjectHome; height: 200px; float: left; margin: @mediaProjectHomeMargin; position: relative;
+							 .project { width: @mediaProjectHome; height: 190px; float: left; margin: @mediaProjectHomeMargin; position: relative;
 										/* On Hover - Add animation cues and define that the animation should hold until the hover state ends */
 										&:hover { .like { -moz-animation: slideLikeBtn .3s linear; -webkit-animation: slideLikeBtn .3s linear; -webkit-animation-fill-mode: forwards; } }
-									    img { background: #000; width: 100%; height: 150px; margin-bottom: -4px; position: absolute; z-index: 2; }
-										.like { width: 100%; height: 40px; padding-top: 10px; color: #999; position: absolute; bottom: 45px;
+									    img { background: #bbb; width: 100%; height: 150px; margin-bottom: -4px; position: absolute; z-index: 1; }
+										.like { width: 100%; height: 30px; padding-top: 10px; color: #999; position: absolute; bottom: 45px;
 												.likeBtn { background: #999; width: 30px; height: 27px; border-radius: 50%; display: inline-block; text-align: center; padding-top: 3px; color: #fff; cursor: pointer;
 														   &:hover { background: #78cf66; }
 												}
 										}
 							 }
 				}
+}
+
+#siteFooter { background: #fff; height: 30px; z-index: 1; position: fixed; right: 0; bottom: 0; left: 0; padding: 10px;
+			  #siteFooterSize { width: @mediaWidth; margin: 0 auto; }
+			  .circle { background: #999; width: 30px; height: 30px; border-radius: 50%; 
+						&:first-child { margin-left: @mediaProjectHomeMargin; }
+			  }
 }
 
 @-moz-keyframes slideLikeBtn {
