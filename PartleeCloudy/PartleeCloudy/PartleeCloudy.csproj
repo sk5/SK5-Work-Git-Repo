@@ -114,6 +114,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Colombo\Block1.png" />
+    <Content Include="Content\Colombo\Block2.png" />
+    <Content Include="Content\Colombo\Block3.png" />
+    <Content Include="Content\Colombo\Block4.png" />
+    <Content Include="Content\Colombo\Block5.png" />
+    <Content Include="Content\Colombo\Main.png" />
     <Content Include="Global.asax" />
     <None Include="Resources\CSS\StyleSheet.less" />
     <Content Include="Resources\CSS\StyleSheet.css">
@@ -122,6 +128,7 @@
     <Content Include="Resources\CSS\StyleSheet.min.css">
       <DependentUpon>StyleSheet.less</DependentUpon>
     </Content>
+    <Content Include="Resources\Images\ViewIcon_24.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -134,7 +141,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Resources\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

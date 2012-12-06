@@ -4,7 +4,22 @@
 }
 
 <div id="feature">
+    <div id="featureSize">
+        <div id="mainLogo"><img src="~/Content/Colombo/Main.png" /></div>
+        <div class="preview"><img src="~/Content/Colombo/Block5.png" /></div>
+        <div class="preview"><img src="~/Content/Colombo/Block4.png" /></div>
+        <div class="preview"><img src="~/Content/Colombo/Block3.png" /></div>
+        <div class="preview"><img src="~/Content/Colombo/Block2.png" /></div>
+        <div class="preview"><img src="~/Content/Colombo/Block1.png" /></div>
 
+        <div class="viewBtn">
+            <div class="viewIcon"></div>
+        </div>
+        <div class="likeBtn">
+            <div class="likeTxt">7</div>
+        </div>
+        <div class="likeLabel">likes</div>
+    </div>
 </div>
 
 <div id="projectsTitle">
@@ -121,7 +136,7 @@
         if ($.browser.msie) {
             $('.project').hover(function () {
                 if (!$(this).children(".like").hasClass('animated')) {
-                    $(this).children(".like").dequeue().stop().animate({ bottom: '0' }, 200);
+                    $(this).children(".like").dequeue().stop().animate({ bottom: '0' }, 100);
                 }
             }, function () {
                 $(this).children(".like").addClass('animated').animate({ bottom: '45px' }, 0, "linear", function () {

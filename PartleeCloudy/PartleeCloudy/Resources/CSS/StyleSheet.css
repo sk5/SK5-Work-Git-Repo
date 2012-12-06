@@ -10,10 +10,106 @@ body {
 }
 /* Media Query -- Reusables */
 #feature {
-  background: #3399ff;
+  background: #f5f5f5;
   width: 100%;
   height: 300px;
+  overflow: hidden;
 }
+#feature:hover #featureSize .viewBtn {
+  -moz-animation: featureViewPop .3s linear;
+  -webkit-animation: featureViewPop .3s linear;
+  -webkit-animation-fill-mode: forwards;
+}
+#feature:hover #featureSize .likeBtn {
+  -moz-animation: featureLikePop .7s linear;
+  -webkit-animation: featureLikePop .7s linear;
+  -webkit-animation-fill-mode: forwards;
+}
+#feature:hover #featureSize .likeLabel {
+  -moz-animation: featureLikeText 1s linear;
+  -webkit-animation: featureLikeText 1s linear;
+  -webkit-animation-fill-mode: forwards;
+}
+#feature #featureSize {
+  width: 1660px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+#feature #featureSize .viewBtn,
+#feature #featureSize .likeBtn {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 25px;
+  cursor: pointer;
+}
+#feature #featureSize .viewBtn {
+  background: #ccc;
+  left: 0;
+  z-index: 2;
+  overflow: hidden;
+}
+#feature #featureSize .viewBtn:hover {
+  background: #3399ff;
+}
+#feature #featureSize .viewBtn .viewIcon {
+  background: #fff;
+  width: 8px;
+  height: 8px;
+  margin: 40% 0 0 28%;
+  position: relative;
+}
+#feature #featureSize .viewBtn .viewIcon:after {
+  content: "";
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #fff;
+  position: absolute;
+  left: 8px;
+  top: -8px;
+}
+#feature #featureSize .likeBtn {
+  background: #ccc;
+  left: 55px;
+  z-index: 1;
+  opacity: 0.0;
+}
+#feature #featureSize .likeBtn:hover {
+  background: #78cf66;
+}
+#feature #featureSize .likeBtn .likeTxt {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 3px;
+}
+#feature #featureSize .likeLabel {
+  color: #999;
+  font-size: 1em;
+  width: auto;
+  height: 20px;
+  opacity: 0.0;
+  position: absolute;
+  bottom: 35px;
+  left: 70px;
+}
+/* Colombo Law */
+/* Feature Layout Elements*/
+#mainLogo {
+  width: 453px;
+  height: 129px;
+  float: left;
+  margin-top: 85px;
+}
+.preview {
+  width: 200px;
+  height: 200px;
+  float: right;
+  margin: 50px 0 0 2px;
+}
+/* Feature Like Elements */
 #projectsTitle {
   width: 100%;
   height: auto;
@@ -46,13 +142,16 @@ body {
   float: left;
   margin: 20px;
   position: relative;
-  /* On Hover - Add animation cues and define that the animation should hold until the hover state ends */
+  /* On Hover - Add animation cues and define that the animation should hold until the hover state ends -- ADD Property that mimics '-webkit-transition' from non hover class --- bottom: 0; */
+
+  /* '-webkit-transiton' will transition the hover animation back out on mouse leave */
 
 }
 #projectsList #mediaListSize .project:hover .like {
   -moz-animation: slideLikeBtn .3s linear;
   -webkit-animation: slideLikeBtn .3s linear;
   -webkit-animation-fill-mode: forwards;
+  bottom: 0;
 }
 #projectsList #mediaListSize .project img {
   background: #bbb;
@@ -69,6 +168,7 @@ body {
   color: #999;
   position: absolute;
   bottom: 45px;
+  -webkit-transition: bottom .1s linear .1s;
 }
 #projectsList #mediaListSize .project .like .likeBtn {
   background: #999;
@@ -99,7 +199,8 @@ body {
   margin: 0 auto;
 }
 #siteFooter .circle {
-  background: #999;
+  background: #f5f5f5;
+  box-shadow: 0 0 0 2px #999;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -107,15 +208,207 @@ body {
 #siteFooter .circle:first-child {
   margin-left: 20px;
 }
+#siteFooter .circle:hover {
+  cursor: pointer;
+  -moz-animation: bounceOut .4s linear;
+  -webkit-animation: bounceOut .4s linear;
+}
+/* Feature View Button Animation */
+@-moz-keyframes featureViewPop {
+  0% {
+    width: 0;
+    height: 0;
+    bottom: 45px;
+    left: 20px;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: -5px;
+  }
+  75% {
+    width: 32px;
+    height: 32px;
+    bottom: 29px;
+    left: 4px;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 0;
+  }
+}
+@-webkit-keyframes featureViewPop {
+  0% {
+    width: 0;
+    height: 0;
+    bottom: 45px;
+    left: 20px;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    left: -5px;
+  }
+  75% {
+    width: 32px;
+    height: 32px;
+    bottom: 29px;
+    left: 4px;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 0;
+  }
+}
+/* Feature Like Button Animation */
+@-moz-keyframes featureLikePop {
+  0% {
+    width: 0;
+    height: 0;
+    bottom: 45px;
+    left: 20px;
+  }
+  60% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 0;
+    opacity: 1;
+  }
+  72% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 55px;
+    opacity: 1;
+  }
+  86% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 40px;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 45px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes featureLikePop {
+  0% {
+    width: 0;
+    height: 0;
+    bottom: 45px;
+    left: 20px;
+  }
+  60% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 0;
+    opacity: 1;
+  }
+  72% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 55px;
+    opacity: 1;
+  }
+  86% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 40px;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    bottom: 25px;
+    left: 45px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes featureLikeText {
+  0% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 0.0;
+  }
+  80% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 0.0;
+  }
+  90% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 0.5;
+  }
+  95% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes featureLikeText {
+  0% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 0.0;
+  }
+  80% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 0.0;
+  }
+  90% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 0.5;
+  }
+  95% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 36px;
+    left: 90px;
+    opacity: 1;
+  }
+}
+/* Home Content Like Button Animation */
 @-moz-keyframes slideLikeBtn {
   0% {
     bottom: 45px;
   }
+  25% {
+    bottom: -8px;
+  }
   50% {
-    bottom: -6px;
+    bottom: 6px;
   }
   75% {
-    bottom: 4px;
+    bottom: -4px;
+  }
+  99% {
+    bottom: 1px;
   }
   100% {
     bottom: 0;
@@ -125,13 +418,64 @@ body {
   0% {
     bottom: 45px;
   }
+  25% {
+    bottom: -8px;
+  }
   50% {
-    bottom: -6px;
+    bottom: 6px;
   }
   75% {
-    bottom: 4px;
+    bottom: -4px;
+  }
+  99% {
+    bottom: 1px;
   }
   100% {
     bottom: 0;
+  }
+}
+/* Footer Bounce Button Animation */
+@-moz-keyframes bounceOut {
+  0% {
+    box-shadow: 0 0 0 2px #999;
+    opacity: 1;
+  }
+  25% {
+    box-shadow: 0 0 0 0px #999;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 5px #999;
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 0 2px #999;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 3px #999;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounceOut {
+  0% {
+    box-shadow: 0 0 0 2px #999;
+    opacity: 1;
+  }
+  25% {
+    box-shadow: 0 0 0 0px #999;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 5px #999;
+    opacity: 1;
+  }
+  75% {
+    box-shadow: 0 0 0 2px #999;
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 3px #999;
+    opacity: 1;
   }
 }
