@@ -8,24 +8,24 @@
 
 #feature { background: #f5f5f5; width: 100%; height: 300px; overflow: hidden;
 		   &:hover { #featureSize { 
-									.viewBtn { -moz-animation: featureViewPop .3s linear; -webkit-animation: featureViewPop .3s linear; -webkit-animation-fill-mode: forwards; }
-									.likeBtn { -moz-animation: featureLikePop .7s linear; -webkit-animation: featureLikePop .7s linear; -webkit-animation-fill-mode: forwards; }
-									.likeLabel { -moz-animation: featureLikeText 1s linear; -webkit-animation: featureLikeText 1s linear; -webkit-animation-fill-mode: forwards; }
+									.viewBtn { -moz-animation: featureViewPop .3s linear; -webkit-animation: featureViewPop .3s linear; -webkit-animation-fill-mode: forwards; opacity: 1; }
+									.likeBtn { -moz-animation: featureLikePop .7s linear; -webkit-animation: featureLikePop .7s linear; -webkit-animation-fill-mode: forwards; opacity: 1; }
+									.likeLabel { -moz-animation: featureLikeText 1s linear; -webkit-animation: featureLikeText 1s linear; -webkit-animation-fill-mode: forwards; opacity: 1; }
 								  } 
 		   }
 		   #featureSize { width: (@mediaWidth - 40); height: 300px; margin: 0 auto; position: relative;
-						  .viewBtn,.likeBtn { width: 0px; height: 0px; border-radius: 50%; position: absolute; bottom: 25px; cursor: pointer; }
-						  .viewBtn { background: #ccc; left: 0; z-index: 2; overflow: hidden;
+						  .viewBtn,.likeBtn { width: 40px; height: 40px; border-radius: 50%; position: absolute; bottom: 25px; cursor: pointer; }
+						  .viewBtn { background: #ccc; left: 0; z-index: 2; overflow: hidden; opacity: 0.0; -webkit-transition: opacity .2s linear .4s;
 									 &:hover { background: #3399ff; }
 									 .viewIcon { background: #fff; width: 8px; height: 8px; margin: 40% 0 0 28%; position: relative;
 												 &:after { content: ""; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 12px solid #fff; position: absolute; left: 8px; top: -8px; }
 									 }
 						  }
-						  .likeBtn { background: #ccc; left: 55px; z-index: 1; opacity: 0.0;
+						  .likeBtn { background: #ccc; left: 45px; z-index: 1; opacity: 0.0; -webkit-transition: opacity .2s linear .2s;
 									 &:hover { background: #78cf66; }
 									 .likeTxt { color: #fff; font-size: 1.5em; text-align: center; margin-top: 3px; }
 						  }
-						  .likeLabel { color: #999; font-size: 1em; width: auto; height: 20px; opacity: 0.0; position: absolute; bottom: 35px; left: 70px; }
+						  .likeLabel { color: #999; font-size: 1em; width: auto; height: 20px; opacity: 0.0; position: absolute; bottom: 36px; left: 90px; -webkit-transition: opacity .2s linear; }
 		   }
 }
 
@@ -60,27 +60,50 @@
 				}
 }
 
-#siteFooter { background: #fff; height: 30px; z-index: 1; position: fixed; right: 0; bottom: 0; left: 0; padding: 10px;
+#siteFooter { background: #fff; height: 30px; z-index: 1; position: fixed; right: 0; bottom: 0; left: 0; padding: 20px;
 			  #siteFooterSize { width: @mediaWidth; margin: 0 auto; }
-			  .circle { background: #f5f5f5; box-shadow: 0 0 0 2px #999; width: 30px; height: 30px; border-radius: 50%; 
+			  .circle { background: #f5f5f5; box-shadow: 0 0 0 2px #999; width: 30px; height: 30px; border-radius: 50%; -webkit-transition: box-shadow .2s linear .2s; display: inline-block;  margin-right: 5px;
 						&:first-child { margin-left: @mediaProjectHomeMargin; }
-						&:hover { cursor: pointer; -moz-animation: bounceOut .4s linear; -webkit-animation: bounceOut .4s linear; }
+						&:hover { cursor: pointer; -moz-animation: bounceOut .4s linear; -webkit-animation: bounceOut .4s linear; box-shadow: 0 0 0 2px #39f; 
+								  .socialIcon { background: #39f; width: 20px; height: 14px; border-radius: 50%; position: relative;
+									  &:after { content: ""; border-right: 4px solid transparent; border-left: 4px solid transparent; border-top: 4px solid #39f; position: absolute; top: 12px; left: 4px; }
+								  }
+								  .emailIcon { background: #39f; width: 20px; height: 14px; position: relative; 
+											   &:before { content: ""; border-right: 10px solid transparent; border-left: 10px solid transparent; border-top: 10px solid #f5f5f5; position: absolute; top: 0; left: 0; }
+											   &:after { content: ""; border-right: 8px solid transparent; border-left: 8px solid transparent; border-top: 8px solid #39f; position: absolute; top: 0; left: 2px; }
+								  }
+								  .phoneIcon { background: #39f; width: 14px; height: 20px; position: relative; border-radius: 3px; margin: 5px 0 0 8px;
+											   &:before { content: "";  background: #f5f5f5; width: 10px; height: 15px; position: absolute; top: 2px; left: 2px; border-radius: 2px; }
+											   &:after { content: ""; background: #f5f5f5; width: 4px; height: 4px; border-radius: 50%; position: absolute; bottom: 1px; left: 5px; box-shadow: 0 0 0 1px #999; }
+								  }
+						}
+						.socialIcon { background: #999; width: 20px; height: 14px; border-radius: 50%; position: relative; margin: 8px 0 0 5px;
+									  &:after { content: ""; border-right: 4px solid transparent; border-left: 4px solid transparent; border-top: 4px solid #999; position: absolute; top: 12px; left: 4px; }
+						}
+						.emailIcon { background: #999; width: 20px; height: 14px; position: relative; margin: 8px 0 0 5px;
+									 &:before { content: ""; border-right: 10px solid transparent; border-left: 10px solid transparent; border-top: 10px solid #f5f5f5; position: absolute; top: 0; left: 0; }
+									 &:after { content: ""; border-right: 8px solid transparent; border-left: 8px solid transparent; border-top: 8px solid #999; position: absolute; top: 0; left: 2px; }
+						}
+						.phoneIcon { background: #999; width: 14px; height: 20px; position: relative; border-radius: 3px; margin: 5px 0 0 8px;
+									 &:before { content: "";  background: #f5f5f5; width: 10px; height: 15px; position: absolute; top: 2px; left: 2px; border-radius: 2px; }
+									 &:after { content: ""; background: #f5f5f5; width: 4px; height: 4px; border-radius: 50%; position: absolute; bottom: 1px; left: 5px; box-shadow: 0 0 0 1px #999; }
+						}
 			  }
 }
 
 /* Feature View Button Animation */
 @-moz-keyframes featureViewPop {
-	0% { width: 0; height: 0; bottom: 45px; left: 20px; }
-	50% { width: 50px; height: 50px; bottom: 20px; left: -5px; }
-	75% { width: 32px; height: 32px; bottom: 29px; left: 4px; }
-	100% { width: 40px; height: 40px; bottom: 25px; left: 0; }
+	0% { width: 0; height: 0; bottom: 45px; left: 20px; opacity: 1; }
+	50% { width: 50px; height: 50px; bottom: 20px; left: -5px; opacity: 1; }
+	75% { width: 32px; height: 32px; bottom: 29px; left: 4px; opacity: 1; }
+	100% { width: 40px; height: 40px; bottom: 25px; left: 0; opacity: 1; }
 }
 
 	@-webkit-keyframes featureViewPop {
-		0% { width: 0; height: 0; bottom: 45px; left: 20px; }
-		50% { width: 50px; height: 50px; bottom: 20px; left: -5px; }
-		75% { width: 32px; height: 32px; bottom: 29px; left: 4px; }
-		100% { width: 40px; height: 40px; bottom: 25px; left: 0; }
+		0% { width: 0; height: 0; bottom: 45px; left: 20px; opacity: 1; }
+		50% { width: 50px; height: 50px; bottom: 20px; left: -5px; opacity: 1; }
+		75% { width: 32px; height: 32px; bottom: 29px; left: 4px; opacity: 1; }
+		100% { width: 40px; height: 40px; bottom: 25px; left: 0; opacity: 1; }
 	}
 
 /* Feature Like Button Animation */
@@ -137,17 +160,17 @@
 
 /* Footer Bounce Button Animation */
 @-moz-keyframes bounceOut {
-	0%{ box-shadow: 0 0 0 2px #999; opacity:1; }
-    25%{ box-shadow: 0 0 0 0px #999; opacity:1; }
-    50%{ box-shadow: 0 0 0 5px #999; opacity:1; }
-    75%{ box-shadow: 0 0 0 2px #999; opacity:1; }
-    100%{ box-shadow: 0 0 0 3px #999; opacity:1; }
+	0%{ box-shadow: 0 0 0 2px #39f; opacity:1; }
+    25%{ box-shadow: 0 0 0 0px #39f; opacity:1; }
+    50%{ box-shadow: 0 0 0 5px #39f; opacity:1; }
+    75%{ box-shadow: 0 0 0 2px #39f; opacity:1; }
+    100%{ box-shadow: 0 0 0 3px #39f; opacity:1; }
 }
 
 	@-webkit-keyframes bounceOut {
-		0%{ box-shadow: 0 0 0 2px #999; opacity:1; }
-		25%{ box-shadow: 0 0 0 0px #999; opacity:1; }
-		50%{ box-shadow: 0 0 0 5px #999; opacity:1; }
-		75%{ box-shadow: 0 0 0 2px #999; opacity:1; }
-		100%{ box-shadow: 0 0 0 3px #999; opacity:1; }
+		0%{ box-shadow: 0 0 0 2px #39f; opacity:1; }
+		25%{ box-shadow: 0 0 0 0px #39f; opacity:1; }
+		50%{ box-shadow: 0 0 0 5px #39f; opacity:1; }
+		75%{ box-shadow: 0 0 0 2px #39f; opacity:1; }
+		100%{ box-shadow: 0 0 0 3px #39f; opacity:1; }
 	}

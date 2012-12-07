@@ -122,12 +122,6 @@
     </div>
 </div>
 
-<div id="siteFooter">
-    <div id="siteFooterSize">
-        <div class="circle"></div>
-    </div>
-</div>
-
 <script>
     $(document).ready(function () {
 
@@ -139,7 +133,7 @@
                     $(this).children(".like").dequeue().stop().animate({ bottom: '0' }, 100);
                 }
             }, function () {
-                $(this).children(".like").addClass('animated').animate({ bottom: '45px' }, 0, "linear", function () {
+                $(this).children(".like").addClass('animated').animate({ bottom: '45px' }, 100, "linear", function () {
                     $(this).removeClass('animated').dequeue();
                 });
             });
