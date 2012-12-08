@@ -21,9 +21,9 @@
 												 &:after { content: ""; border-top: 12px solid transparent; border-bottom: 12px solid transparent; border-left: 12px solid #fff; position: absolute; left: 8px; top: -8px; }
 									 }
 						  }
-						  .likeBtn { background: #ccc; left: 45px; z-index: 1; opacity: 0.0; -webkit-transition: opacity .2s linear .2s;
+						  .likeBtn { background: #ccc; left: 45px; color: #fff; font-size: 1.5em; line-height: 38px; text-align: center; z-index: 1; opacity: 0.0; -webkit-transition: opacity .2s linear .2s;
 									 &:hover { background: #78cf66; }
-									 .likeTxt { color: #fff; font-size: 1.5em; text-align: center; margin-top: 3px; }
+									 &.liked { background: #60ab50; }
 						  }
 						  .likeLabel { color: #999; font-size: 1em; width: auto; height: 20px; opacity: 0.0; position: absolute; bottom: 36px; left: 90px; -webkit-transition: opacity .2s linear; }
 		   }
@@ -48,19 +48,27 @@
 				#mediaListSize { width: @mediaWidth; margin: 0 auto; 
 							 .project { width: @mediaProjectHome; height: 190px; float: left; margin: @mediaProjectHomeMargin; position: relative;
 										/* On Hover - Add animation cues and define that the animation should hold until the hover state ends -- ADD Property that mimics '-webkit-transition' from non hover class --- bottom: 0; */
-										&:hover { .like { -moz-animation: slideLikeBtn .3s linear; -webkit-animation: slideLikeBtn .3s linear; -webkit-animation-fill-mode: forwards; bottom: 0; } }
-									    img { background: #bbb; width: 100%; height: 150px; margin-bottom: -4px; position: absolute; z-index: 1; }
+										&:hover { 
+											      .like { -moz-animation: slideLikeBtn .3s linear; -webkit-animation: slideLikeBtn .3s linear; -webkit-animation-fill-mode: forwards; bottom: 0; } 
+												  .imgWrap img { -moz-animation: homeProjHover .3s linear; -webkit-animation: homeProjHover .3s linear; -webkit-animation-fill-mode: forwards; opacity: 1; }
+										}
+									    .imgWrap { background: #fff; width: @mediaProjectHome; height: 150px; overflow: hidden; position: absolute; z-index: 1;
+												   img { background: #bbb; width: 300px; height: 200px; margin-bottom: -4px; opacity: 0.5; -webkit-transition: opacity .2s linear .1s; }
+										}
 										/* '-webkit-transiton' will transition the hover animation back out on mouse leave */
 										.like { width: 100%; height: 30px; padding-top: 10px; color: #999; position: absolute; bottom: 45px; -webkit-transition: bottom .1s linear .1s;
 												.likeBtn { background: #999; width: 30px; height: 27px; border-radius: 50%; display: inline-block; text-align: center; padding-top: 3px; color: #fff; cursor: pointer;
 														   &:hover { background: #78cf66; }
+														   &.liked { background: #60ab50; }
+														   &.shake { -moz-animation: shakeLikeBtn .3s linear; -webkit-animation: shakeLikeBtn .3s linear; }
 												}
+												.likeLabel { display: inline-block; font-size: inherit; }
 										}
 							 }
 				}
 }
 
-#siteFooter { background: #fff; height: 30px; z-index: 1; position: fixed; right: 0; bottom: 0; left: 0; padding: 20px;
+#siteFooter { background: #fff; height: 30px; z-index: 1; position: fixed; right: 0; bottom: 0; left: 0; padding: 20px; border-top: 1px solid #ddd;
 			  #siteFooterSize { width: @mediaWidth; margin: 0 auto; }
 			  .circle { background: #f5f5f5; box-shadow: 0 0 0 2px #999; width: 30px; height: 30px; border-radius: 50%; -webkit-transition: box-shadow .2s linear .2s; display: inline-block;  margin-right: 5px;
 						&:first-child { margin-left: @mediaProjectHomeMargin; }
@@ -74,7 +82,7 @@
 								  }
 								  .phoneIcon { background: #39f; width: 14px; height: 20px; position: relative; border-radius: 3px; margin: 5px 0 0 8px;
 											   &:before { content: "";  background: #f5f5f5; width: 10px; height: 15px; position: absolute; top: 2px; left: 2px; border-radius: 2px; }
-											   &:after { content: ""; background: #f5f5f5; width: 4px; height: 4px; border-radius: 50%; position: absolute; bottom: 1px; left: 5px; box-shadow: 0 0 0 1px #999; }
+											   &:after { content: ""; background: #f5f5f5; width: 4px; height: 4px; border-radius: 50%; position: absolute; bottom: 1px; left: 5px; box-shadow: 0 0 0 1px #39f; }
 								  }
 						}
 						.socialIcon { background: #999; width: 20px; height: 14px; border-radius: 50%; position: relative; margin: 8px 0 0 5px;
@@ -108,15 +116,17 @@
 
 /* Feature Like Button Animation */
 @-moz-keyframes featureLikePop {
-	0% { width: 0; height: 0; bottom: 45px; left: 20px; }
-	60% { width: 40px; height: 40px; bottom: 25px; left: 0; opacity: 1; }
+	0% { width: 0; height: 0; bottom: 55px; left: 20px; font-size: 0em; }
+	50% { width: 0; height: 0; bottom: 35px; left: 10px; }
+	60% { width: 40px; height: 40px; bottom: 25px; left: 0; opacity: 1; font-size: inherit; }
 	72% { width: 40px; height: 40px; bottom: 25px; left: 55px; opacity: 1; }
 	86% { width: 40px; height: 40px; bottom: 25px; left: 40px; opacity: 1; }
 	100% { width: 40px; height: 40px; bottom: 25px; left: 45px; opacity: 1; }
 }
 
 	@-webkit-keyframes featureLikePop {
-		0% { width: 0; height: 0; bottom: 45px; left: 20px; }
+		0% { width: 0; height: 0; bottom: 55px; left: 20px; font-size: 0em; }
+		50% { width: 0; height: 0; bottom: 35px; left: 10px; font-size: inherit;  }
 		60% { width: 40px; height: 40px; bottom: 25px; left: 0; opacity: 1; }
 		72% { width: 40px; height: 40px; bottom: 25px; left: 55px; opacity: 1; }
 		86% { width: 40px; height: 40px; bottom: 25px; left: 40px; opacity: 1; }
@@ -139,12 +149,23 @@
 		100% { bottom: 36px; left: 90px; opacity: 1; }
 	}
 
+/* Home Content Hover Animation */
+@-moz-keyframes homeProjHover {
+	0% { opacity: 0.5; }
+	100% { opacity: 1; }
+}
+
+	@-webkit-keyframes homeProjHover {
+		0% { opacity: 0.5; }
+		100% { opacity: 1; }
+	}
+
 /* Home Content Like Button Animation */
 @-moz-keyframes slideLikeBtn {
 	0% { bottom: 45px; }
 	25% { bottom: -8px; }
 	50% { bottom: 6px; }
-	75% { bottom: -4px;}
+	75% { bottom: -4px; }
 	99% { bottom: 1px; }
 	100% { bottom: 0; }
 }
@@ -153,9 +174,28 @@
 		0% { bottom: 45px; }
 		25% { bottom: -8px; }
 		50% { bottom: 6px; }
-		75% { bottom: -4px;}
+		75% { bottom: -4px; }
 		99% { bottom: 1px; }
 		100% { bottom: 0; }
+	}
+
+/* Home Content Like Button Shake Animation */
+@-moz-keyframes shakeLikeBtn {
+	0% { margin-left: 0; }
+	25% { margin-left: -8px; }
+	50% { margin-left: 7px; }
+	75% { margin-left: -4px; }
+	99% { margin-left: 2px; }
+	100% { margin-left: 0; }
+}
+
+	@-webkit-keyframes shakeLikeBtn {
+		0% { margin-left: 0; }
+		25% { margin-left: -8px; }
+		50% { margin-left: 7px; }
+		75% { margin-left: -4px; }
+		99% { margin-left: 2px; }
+		100% { margin-left: 0; }
 	}
 
 /* Footer Bounce Button Animation */

@@ -16,7 +16,7 @@
             <div class="viewIcon"></div>
         </div>
         <div class="likeBtn">
-            <div class="likeTxt">7</div>
+            7
         </div>
         <div class="likeLabel">likes</div>
     </div>
@@ -32,90 +32,90 @@
     <div id="mediaListSize">
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="~/Content/HSCConcepts/Home/home001.jpg" /></div>
             <div class="like">
                 <div class="likeBtn">8</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="~/Content/ESPNRedesign/Home/home001.jpg" /></div>
             <div class="like">
                 <div class="likeBtn">4</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">8</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">3</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">9</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">9</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">1</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">1</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">1</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">1</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
         <div class="project">
-            <img src="" />
+            <div class="imgWrap"><img src="" /></div>
             <div class="like">
                 <div class="likeBtn">1</div>
-                likes
+                <div class="likeLabel">likes</div>
             </div>
         </div>
 
@@ -139,40 +139,21 @@
             });
         };
 
+        // Check if like button has been clicked -- If not then add count. If so then deny additonal clicks and shake. 
+        $('.likeBtn').click(function () {
+            if ($(this).hasClass('liked')) {
+                $(this).addClass('shake').delay(1000).queue(function (next) {
+                    $(this).removeClass('shake');
+                    next();
+                });
+            } else {
+                var num = parseInt($.trim($(this).html()));
+                $(this).addClass('liked');
+                $(this).html(++num);
+                $(this).siblings(".likeLabel").html("you liked this");
+            }
+        });
+
     });
-           
-
-
-        //if ($.browser.msie) {
-            //$('.project').hover(function () {
-                //$(this).children(".like").filter(':not(:animated)').animate({ bottom: '-5px' }, 200, function () {
-                    //$(this).animate({ bottom: '4px' }, 100, function () {
-                        //$(this).animate({ bottom: '0' }, 100);
-                    //});
-                //});
-            //}, function () {
-                //$(this).children(".like").animate({ bottom: '45px' });
-            //});
-        //}
-
-        //$('.project').mouseout(function () {
-            //if ($.browser.msie) {
-                //$(this).children(".like").css({ bottom: '45px' });
-                //$(this).stop(true, true);
-                //$(this).siblings().children(".like").css({ bottom: '45px' });
-
-            //}
-        //});
-
-        //$('.project').mouseenter(function () {
-            //if ($.browser.msie) {
-                //$(this).children(".like").animate({ bottom: '-5px' }, 200, function() {
-                    //$(this).animate({ bottom: '4px' }, 100, function () {
-                        //$(this).animate({ bottom: '0' }, 100);
-                    //});
-                //});
-                //$(this).siblings().children(".like").css({ bottom: '45px' });
-            //}
-        //});
 
 </script>

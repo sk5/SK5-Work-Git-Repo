@@ -120,6 +120,9 @@
     <Content Include="Content\Colombo\Block4.png" />
     <Content Include="Content\Colombo\Block5.png" />
     <Content Include="Content\Colombo\Main.png" />
+    <Content Include="Content\ESPNRedesign\Home\home001.jpg" />
+    <Content Include="Content\HSCConcepts\Home\home001.jpg" />
+    <Content Include="Content\PC-Logo.png" />
     <Content Include="Global.asax" />
     <None Include="Resources\CSS\StyleSheet.less" />
     <Content Include="Resources\CSS\StyleSheet.css">
@@ -140,6 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\ESPNRedesign\Feature\" />
+    <Folder Include="Content\ESPNRedesign\Full\" />
+    <Folder Include="Content\HSCConcepts\Feature\" />
+    <Folder Include="Content\HSCConcepts\Full\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
